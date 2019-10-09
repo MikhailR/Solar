@@ -1,0 +1,62 @@
+.icons {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;				/*элементы, не помещающиеся в один ряд, переносятся на следующий*/
+	margin: 120px auto 70px;
+}
+
+.icons_element {
+	flex-basis: 30%;		/*задане "базового размера" (ширны картнки от общей ширины страницы)*/
+	text-align: center;
+	margin-bottom: 50px;
+}
+
+.icons_image {
+	height: 57px;
+	display: flex;
+	align-items: center;
+}
+
+.icons_image img {
+	display: block;
+	max-width: 100%;
+	margin: 0 auto;
+}
+
+.icons_element p {
+	font-size: 16px;
+	line-height: 30px;
+	color: #1d1d1d;
+	letter-spacing: 0.8px;		/*интервал между буквами: 16px*50(из Photoshop)/1000*/
+	margin: 20px 0;
+	opacity: 0.7;				/*непрозрачность, из Photoshop*/
+}
+
+.icons_element  .icons_title {
+	font-size: 18px;
+	font-weight: 700;
+	letter-spacing: 0.9px;		/*интервал между буквами: 18px*50(из Photoshop)/1000*/
+	opacity: 1;				/*убираем непрозрачность*/
+	margin-top: 10px;
+	margin-bottom: 25px;
+}
+
+@media (max-width: 980px) {
+	.icons { margin: 60px auto 10px;}
+}
+
+@media (max-width: 768px) {
+	.icons_element { flex-basis: 48%;}
+}
+
+@media (max-width: 480px) {
+	.icons { 
+		flex-direction: column;
+		margin: 50px auto;
+	}
+	
+	.icons_element {
+		flex-basis: auto;
+		margin: 10px 0;
+	}
+}
